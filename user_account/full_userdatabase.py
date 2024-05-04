@@ -34,4 +34,5 @@ class full_user_database:
     for i, j in zip(self.load(), range(len(os.listdir(self.case)))):
       if i.find_username(username):
         i.block_by_username(username)
-        pickle.save(self.content[0], f"{j}.pickle")
+        pickle.dump(self.content[0], f"{j}.pickle")
+        
